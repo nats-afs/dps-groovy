@@ -1,0 +1,36 @@
+spring:
+#  mvc:
+#    favicon:
+#      enabled: false
+
+#  data:
+#    rest:
+#      base-path: /api
+#      default-media-type: application/hal+json
+
+#  profiles:
+#    active:
+#    - dev
+#    - prod
+
+#  devtools:
+#    livereload:
+#      enabled: false
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dps_db
+    username: iodev
+    password: iodev
+    driver-class-name: org.postgresql.Driver
+    initialization-mode: always
+  jpa:
+    hibernate:
+      ddl-auto: 'create-drop'
+    show-sql: true
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+
+#  batch:
+#    initialize-schema: always
